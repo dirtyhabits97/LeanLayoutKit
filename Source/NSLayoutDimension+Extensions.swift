@@ -10,8 +10,8 @@ import UIKit
 
 extension NSLayoutDimension {
     
-    func equals(dimension: NSLayoutDimension, multiplier: CGFloat = 1) -> NSLayoutConstraint {
-        let constraint = self.constraint(equalTo: dimension, multiplier: multiplier)
+    func equals(dimension: NSLayoutDimension, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = self.constraint(equalTo: dimension, multiplier: multiplier, constant: constant)
         constraint.isActive = true
         return constraint
     }
@@ -22,8 +22,8 @@ extension NSLayoutDimension {
         return constraint
     }
     
-    func greaterOrEquals(dimension: NSLayoutDimension, multiplier: CGFloat = 1) -> NSLayoutConstraint {
-        let constraint = self.constraint(greaterThanOrEqualTo: dimension, multiplier: multiplier)
+    func greaterOrEquals(dimension: NSLayoutDimension, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = self.constraint(greaterThanOrEqualTo: dimension, multiplier: multiplier, constant: constant)
         constraint.isActive = true
         return constraint
     }
@@ -34,8 +34,8 @@ extension NSLayoutDimension {
         return constraint
     }
     
-    func lessOrEquals(dimension: NSLayoutDimension, multiplier: CGFloat = 1) -> NSLayoutConstraint {
-        let constraint = self.constraint(lessThanOrEqualTo: dimension, multiplier: multiplier)
+    func lessOrEquals(dimension: NSLayoutDimension, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = self.constraint(lessThanOrEqualTo: dimension, multiplier: multiplier, constant: constant)
         constraint.isActive = true
         return constraint
     }
