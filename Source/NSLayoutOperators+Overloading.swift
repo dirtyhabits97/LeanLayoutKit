@@ -55,35 +55,37 @@ public func >= (lhs: NSLayoutDimension, rhs: CGFloat) -> NSLayoutConstraint {
 // MARK: - Equals
 
 @discardableResult
-public func ~> (lhs: NSLayoutYAxisAnchor, rhs: NSLayoutYAxisAnchor) -> NSLayoutConstraint {
+public func --> (lhs: NSLayoutYAxisAnchor, rhs: NSLayoutYAxisAnchor) -> NSLayoutConstraint {
     return lhs.equals(anchor: rhs)
 }
 
 @discardableResult
-public func ~> (lhs: NSLayoutXAxisAnchor, rhs: NSLayoutXAxisAnchor) -> NSLayoutConstraint {
+public func --> (lhs: NSLayoutXAxisAnchor, rhs: NSLayoutXAxisAnchor) -> NSLayoutConstraint {
     return lhs.equals(anchor: rhs)
 }
 
 @discardableResult
-public func ~> (lhs: NSLayoutDimension, rhs: NSLayoutDimension) -> NSLayoutConstraint {
+public func --> (lhs: NSLayoutDimension, rhs: NSLayoutDimension) -> NSLayoutConstraint {
     return lhs.equals(anchor: rhs)
 }
 
 @discardableResult
-public func ~> (lhs: NSLayoutDimension, rhs: CGFloat) -> NSLayoutConstraint {
+public func --> (lhs: NSLayoutDimension, rhs: CGFloat) -> NSLayoutConstraint {
     return lhs.equals(constant: rhs)
 }
 
 // MARK: - Constant
 
 @discardableResult
-public func + (lhs: NSLayoutConstraint, rhs: CGFloat) -> NSLayoutConstraint {
-    lhs.constant += rhs
+public func --> (lhs: NSLayoutConstraint, rhs: CGFloat) -> NSLayoutConstraint {
+    lhs.constant = rhs
     return lhs
 }
 
+// MARK: - Priority
+
 @discardableResult
-public func - (lhs: NSLayoutConstraint, rhs: CGFloat) -> NSLayoutConstraint {
-    lhs.constant -= rhs
+public func --> (lhs: NSLayoutConstraint, rhs: UILayoutPriority) -> NSLayoutConstraint {
+    lhs.priority = rhs
     return lhs
 }
