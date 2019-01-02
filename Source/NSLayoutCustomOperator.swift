@@ -8,9 +8,9 @@
 
 import Foundation
 
-precedencegroup LayoutConstraintPrecedence {
+precedencegroup LeanLayoutConstraintPrecedence {
     associativity: left
     lowerThan: ComparisonPrecedence
 }
 
-infix operator -->: LayoutConstraintPrecedence
+infix operator -->: LeanLayoutConstraintPrecedence

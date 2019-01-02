@@ -11,17 +11,12 @@ import Foundation
 // MARK: - Less or equal
 
 @discardableResult
-public func <= (lhs: NSLayoutYAxisAnchor, rhs: NSLayoutYAxisAnchor) -> NSLayoutConstraint {
-    return lhs.lessOrEquals(anchor: rhs)
+public func <= <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: (Anchor, CGFloat)) -> NSLayoutConstraint {
+    return lhs.lessOrEquals(anchor: rhs.0, constant: rhs.1)
 }
 
 @discardableResult
-public func <= (lhs: NSLayoutXAxisAnchor, rhs: NSLayoutXAxisAnchor) -> NSLayoutConstraint {
-    return lhs.lessOrEquals(anchor: rhs)
-}
-
-@discardableResult
-public func <= (lhs: NSLayoutDimension, rhs: NSLayoutDimension) -> NSLayoutConstraint {
+public func <= <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: Anchor) -> NSLayoutConstraint {
     return lhs.lessOrEquals(anchor: rhs)
 }
 
@@ -33,17 +28,12 @@ public func <= (lhs: NSLayoutDimension, rhs: CGFloat) -> NSLayoutConstraint {
 // MARK: - Greater or equals
 
 @discardableResult
-public func >= (lhs: NSLayoutYAxisAnchor, rhs: NSLayoutYAxisAnchor) -> NSLayoutConstraint {
-    return lhs.greaterOrEquals(anchor: rhs)
+public func >= <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: (Anchor, CGFloat)) -> NSLayoutConstraint {
+    return lhs.greaterOrEquals(anchor: rhs.0, constant: rhs.1)
 }
 
 @discardableResult
-public func >= (lhs: NSLayoutXAxisAnchor, rhs: NSLayoutXAxisAnchor) -> NSLayoutConstraint {
-    return lhs.greaterOrEquals(anchor: rhs)
-}
-
-@discardableResult
-public func >= (lhs: NSLayoutDimension, rhs: NSLayoutDimension) -> NSLayoutConstraint {
+public func >= <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: Anchor) -> NSLayoutConstraint {
     return lhs.greaterOrEquals(anchor: rhs)
 }
 
@@ -55,31 +45,28 @@ public func >= (lhs: NSLayoutDimension, rhs: CGFloat) -> NSLayoutConstraint {
 // MARK: - Equals
 
 @discardableResult
-public func --> (lhs: NSLayoutYAxisAnchor, rhs: NSLayoutYAxisAnchor) -> NSLayoutConstraint {
+public func ~= <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: (Anchor, CGFloat)) -> NSLayoutConstraint {
+    return lhs.equals(anchor: rhs.0, constant: rhs.1)
+}
+
+@discardableResult
+public func ~= <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: Anchor) -> NSLayoutConstraint {
     return lhs.equals(anchor: rhs)
 }
 
 @discardableResult
-public func --> (lhs: NSLayoutXAxisAnchor, rhs: NSLayoutXAxisAnchor) -> NSLayoutConstraint {
+public func ~= (lhs: NSLayoutDimension, rhs: NSLayoutDimension) -> NSLayoutConstraint {
     return lhs.equals(anchor: rhs)
 }
 
-@discardableResult
-public func --> (lhs: NSLayoutDimension, rhs: NSLayoutDimension) -> NSLayoutConstraint {
-    return lhs.equals(anchor: rhs)
+// MARK: - Constants
+
+public func + <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: CGFloat) -> (Anchor, CGFloat) {
+    return (lhs, rhs)
 }
 
-@discardableResult
-public func --> (lhs: NSLayoutDimension, rhs: CGFloat) -> NSLayoutConstraint {
-    return lhs.equals(constant: rhs)
-}
-
-// MARK: - Constant
-
-@discardableResult
-public func --> (lhs: NSLayoutConstraint, rhs: CGFloat) -> NSLayoutConstraint {
-    lhs.constant = rhs
-    return lhs
+public func - <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: CGFloat) -> (Anchor, CGFloat) {
+    return (lhs, -rhs)
 }
 
 // MARK: - Priority
