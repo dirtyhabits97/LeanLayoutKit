@@ -59,6 +59,11 @@ public func ~= (lhs: NSLayoutDimension, rhs: NSLayoutDimension) -> NSLayoutConst
     return lhs.equals(anchor: rhs)
 }
 
+@discardableResult
+public func ~= (lhs: NSLayoutDimension, rhs: CGFloat) -> NSLayoutConstraint {
+    return lhs.equals(constant: rhs)
+}
+
 // MARK: - Constants
 
 public func + <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: CGFloat) -> (Anchor, CGFloat) {
@@ -70,6 +75,13 @@ public func - <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: CGFloat) -> (Anchor,
 }
 
 // MARK: - Priority
+
+precedencegroup LeanLayoutConstraintPrecedence {
+    associativity: left
+    lowerThan: ComparisonPrecedence
+}
+
+infix operator -->: LeanLayoutConstraintPrecedence
 
 @discardableResult
 public func --> (lhs: NSLayoutConstraint, rhs: UILayoutPriority) -> NSLayoutConstraint {

@@ -10,9 +10,8 @@
 		EA243B8C21D8574700B53508 /* LeanLayoutKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EA243B8A21D8574700B53508 /* LeanLayoutKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA243B9421D8578E00B53508 /* NSLayoutAnchor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243B9321D8578E00B53508 /* NSLayoutAnchor+Extensions.swift */; };
 		EA243B9621D8588500B53508 /* NSLayoutDimension+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243B9521D8588500B53508 /* NSLayoutDimension+Extensions.swift */; };
-		EA243BAF21D86AB400B53508 /* NSLayoutOperators+Overloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243BAE21D86AB400B53508 /* NSLayoutOperators+Overloading.swift */; };
+		EA243BAF21D86AB400B53508 /* NSLayoutOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243BAE21D86AB400B53508 /* NSLayoutOperators.swift */; };
 		EA243BB121D870A300B53508 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243BB021D870A300B53508 /* UIView+Extensions.swift */; };
-		EA243BB321D8803700B53508 /* NSLayoutCustomOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243BB221D8803700B53508 /* NSLayoutCustomOperator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +20,8 @@
 		EA243B8B21D8574700B53508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA243B9321D8578E00B53508 /* NSLayoutAnchor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutAnchor+Extensions.swift"; sourceTree = "<group>"; };
 		EA243B9521D8588500B53508 /* NSLayoutDimension+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutDimension+Extensions.swift"; sourceTree = "<group>"; };
-		EA243BAE21D86AB400B53508 /* NSLayoutOperators+Overloading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutOperators+Overloading.swift"; sourceTree = "<group>"; };
+		EA243BAE21D86AB400B53508 /* NSLayoutOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutOperators.swift; sourceTree = "<group>"; };
 		EA243BB021D870A300B53508 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		EA243BB221D8803700B53508 /* NSLayoutCustomOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutCustomOperator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +64,7 @@
 		EA243B9221D8577000B53508 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				EA243BB221D8803700B53508 /* NSLayoutCustomOperator.swift */,
-				EA243BAE21D86AB400B53508 /* NSLayoutOperators+Overloading.swift */,
+				EA243BAE21D86AB400B53508 /* NSLayoutOperators.swift */,
 				EA243B9321D8578E00B53508 /* NSLayoutAnchor+Extensions.swift */,
 				EA243B9521D8588500B53508 /* NSLayoutDimension+Extensions.swift */,
 				EA243BB021D870A300B53508 /* UIView+Extensions.swift */,
@@ -154,8 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA243BB321D8803700B53508 /* NSLayoutCustomOperator.swift in Sources */,
-				EA243BAF21D86AB400B53508 /* NSLayoutOperators+Overloading.swift in Sources */,
+				EA243BAF21D86AB400B53508 /* NSLayoutOperators.swift in Sources */,
 				EA243B9421D8578E00B53508 /* NSLayoutAnchor+Extensions.swift in Sources */,
 				EA243BB121D870A300B53508 /* UIView+Extensions.swift in Sources */,
 				EA243B9621D8588500B53508 /* NSLayoutDimension+Extensions.swift in Sources */,
