@@ -1,5 +1,5 @@
 //
-//  NSLayoutAnchor+Extensions.swift
+//  LeanLayoutAnchor.swift
 //  LeanLayoutKit
 //
 //  Created by Gonzalo Reyes Huertas on 12/29/18.
