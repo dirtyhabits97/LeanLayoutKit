@@ -34,10 +34,3 @@ public final class LeanLayoutProxy {
     }
     
 }
-
-public func layout(_ firstView: UIView,
-                   _ secondView: UIView,
-                   _ configure: (_ first: LeanLayoutProxy, _ second: LeanLayoutProxy) -> Void) {
-    firstView.layout(relativeTo: secondView, configure)
-}
-
