@@ -92,94 +92,94 @@ private extension LeanLayoutProperty where Anchor == NSLayoutDimension {
 
 // MARK: - Operator methods
 
-extension LeanLayoutProperty {
+public extension LeanLayoutProperty {
     
     @discardableResult
-    public static func == (lhs: LeanLayoutProperty,rhs: Anchor) -> NSLayoutConstraint {
+    static func == (lhs: LeanLayoutProperty,rhs: Anchor) -> NSLayoutConstraint {
         return lhs.equals(rhs)
     }
     
     @discardableResult
-    public static func == (lhs: LeanLayoutProperty,
+    static func == (lhs: LeanLayoutProperty,
                            rhs: (anchor: Anchor, constant: CGFloat)) -> NSLayoutConstraint {
         return lhs.equals(rhs.anchor, constant: rhs.constant)
     }
     
     @discardableResult
-    public static func >= (lhs: LeanLayoutProperty, rhs: Anchor) -> NSLayoutConstraint {
+    static func >= (lhs: LeanLayoutProperty, rhs: Anchor) -> NSLayoutConstraint {
         return lhs.greaterOrEquals(rhs)
     }
     
     @discardableResult
-    public static func >= (lhs: LeanLayoutProperty,
+    static func >= (lhs: LeanLayoutProperty,
                            rhs: (anchor: Anchor, constant: CGFloat)) -> NSLayoutConstraint {
         return lhs.greaterOrEquals(rhs.anchor, constant: rhs.constant)
     }
     
     @discardableResult
-    public static func <= (lhs: LeanLayoutProperty, rhs: Anchor) -> NSLayoutConstraint {
+    static func <= (lhs: LeanLayoutProperty, rhs: Anchor) -> NSLayoutConstraint {
         return lhs.lessOrEquals(rhs)
     }
     
     @discardableResult
-    public static func <= (lhs: LeanLayoutProperty,
+    static func <= (lhs: LeanLayoutProperty,
                            rhs: (anchor: Anchor, constant: CGFloat)) -> NSLayoutConstraint {
         return lhs.lessOrEquals(rhs.anchor, constant: rhs.constant)
     }
     
 }
 
-extension LeanLayoutProperty {
+public extension LeanLayoutProperty {
     
     @discardableResult
-    public static func == (lhs: LeanLayoutProperty, rhs: LeanLayoutProperty) -> NSLayoutConstraint {
+    static func == (lhs: LeanLayoutProperty, rhs: LeanLayoutProperty) -> NSLayoutConstraint {
         return lhs.equals(rhs._anchor)
     }
     
     @discardableResult
-    public static func == (lhs: LeanLayoutProperty,
+    static func == (lhs: LeanLayoutProperty,
                            rhs: (property: LeanLayoutProperty, constant: CGFloat)) -> NSLayoutConstraint {
         return lhs.equals(rhs.property._anchor, constant: rhs.constant)
     }
     
     @discardableResult
-    public static func >= (lhs: LeanLayoutProperty, rhs: LeanLayoutProperty) -> NSLayoutConstraint {
+    static func >= (lhs: LeanLayoutProperty, rhs: LeanLayoutProperty) -> NSLayoutConstraint {
         return lhs.greaterOrEquals(rhs._anchor)
     }
     
     @discardableResult
-    public static func >= (lhs: LeanLayoutProperty,
+    static func >= (lhs: LeanLayoutProperty,
                            rhs: (property: LeanLayoutProperty, constant: CGFloat)) -> NSLayoutConstraint {
         return lhs.greaterOrEquals(rhs.property._anchor, constant: rhs.constant)
     }
     
     @discardableResult
-    public static func <= (lhs: LeanLayoutProperty, rhs: LeanLayoutProperty) -> NSLayoutConstraint {
+    static func <= (lhs: LeanLayoutProperty, rhs: LeanLayoutProperty) -> NSLayoutConstraint {
         return lhs.lessOrEquals(rhs._anchor)
     }
     
     @discardableResult
-    public static func <= (lhs: LeanLayoutProperty,
+    static func <= (lhs: LeanLayoutProperty,
                            rhs: (property: LeanLayoutProperty, constant: CGFloat)) -> NSLayoutConstraint {
         return lhs.lessOrEquals(rhs.property._anchor, constant: rhs.constant)
     }
     
 }
 
-extension LeanLayoutProperty where Anchor == NSLayoutDimension {
+public extension LeanLayoutProperty where Anchor == NSLayoutDimension {
     
     @discardableResult
-    public static func == (lhs: LeanLayoutProperty, rhs: CGFloat) -> NSLayoutConstraint {
+    static func == (lhs: LeanLayoutProperty, rhs: CGFloat) -> NSLayoutConstraint {
         return lhs.equals(constant: rhs)
     }
     
     @discardableResult
-    public static func >= (lhs: LeanLayoutProperty, rhs: CGFloat) -> NSLayoutConstraint {
+    static func >= (lhs: LeanLayoutProperty, rhs: CGFloat) -> NSLayoutConstraint {
         return lhs.greaterOrEquals(constant: rhs)
     }
     
     @discardableResult
-    public static func <= (lhs: LeanLayoutProperty, rhs: CGFloat) -> NSLayoutConstraint {
+    static func <= (lhs: LeanLayoutProperty, rhs: CGFloat) -> NSLayoutConstraint {
         return lhs.lessOrEquals(constant: rhs)
     }
     
