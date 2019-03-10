@@ -14,7 +14,8 @@ public func + <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: CGFloat) -> (Anchor,
     return (lhs, rhs)
 }
 
-public func + <Anchor: LeanLayoutAnchor> (lhs: LeanLayoutProperty<Anchor>, rhs: CGFloat) -> (LeanLayoutProperty<Anchor>, CGFloat) {
+public func + <Anchor: LeanLayoutAnchor> (lhs: LeanLayoutProperty<Anchor>,
+                                          rhs: CGFloat) -> (LeanLayoutProperty<Anchor>, CGFloat) {
     return (lhs, rhs)
 }
 
@@ -22,21 +23,7 @@ public func - <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: CGFloat) -> (Anchor,
     return (lhs, -rhs)
 }
 
-public func - <Anchor: LeanLayoutAnchor> (lhs: LeanLayoutProperty<Anchor>, rhs: CGFloat) -> (LeanLayoutProperty<Anchor>, CGFloat) {
+public func - <Anchor: LeanLayoutAnchor> (lhs: LeanLayoutProperty<Anchor>,
+                                          rhs: CGFloat) -> (LeanLayoutProperty<Anchor>, CGFloat) {
     return (lhs, -rhs)
-}
-
-// MARK: - Priority
-
-precedencegroup LeanLayoutConstraintPrecedence {
-    associativity: left
-    lowerThan: ComparisonPrecedence
-}
-
-infix operator -->: LeanLayoutConstraintPrecedence
-
-@discardableResult
-public func --> (lhs: NSLayoutConstraint, rhs: UILayoutPriority) -> NSLayoutConstraint {
-    lhs.priority = rhs
-    return lhs
 }

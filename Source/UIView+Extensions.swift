@@ -8,43 +8,43 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
-    public func layout(_ configure: (LeanLayoutProxy) -> Void) {
+    func layout(_ configure: (LeanLayoutProxy) -> Void) {
         translatesAutoresizingMaskIntoConstraints = false
         configure(LeanLayoutProxy(view: self))
     }
     
-    public func layout(relativeTo otherView: UIView,
-                       _ configure: (_ view: LeanLayoutProxy, _ otherView: LeanLayoutProxy) -> Void) {
+    func layout(relativeTo otherView: UIView,
+                       _ configure: (_ lhs: LeanLayoutProxy, _ rhs: LeanLayoutProxy) -> Void) {
         translatesAutoresizingMaskIntoConstraints = false
         configure(LeanLayoutProxy(view: self), LeanLayoutProxy(view: otherView))
     }
     
 }
 
-extension UIEdgeInsets {
+private extension UIEdgeInsets {
     
-    fileprivate var leading: CGFloat { return left }
-    fileprivate var trailing: CGFloat { return right }
+    init(_ constant: CGFloat) {
+        self.init(top: constant, left: constant, bottom: constant, right: constant)
+    }
     
 }
 
-extension UIView {
+public extension UIView {
     
-    public func fillSuperView(withMargins margins: UIEdgeInsets = .zero) {
+    func fillSuperview(withMargins margins: UIEdgeInsets = .zero) {
         guard let superview = self.superview else { return }
         layout(relativeTo: superview) { (view, superview) in
             view.top == superview.top + margins.top
             view.bottom == superview.bottom - margins.bottom
-            view.leading == superview.leading + margins.leading
-            view.trailing == superview.trailing - margins.trailing
+            view.leading == superview.leading + margins.left
+            view.trailing == superview.trailing - margins.right
         }
     }
     
-    public func addAndFill(withSubView view: UIView, margins: UIEdgeInsets = .zero) {
-        addSubview(view)
-        view.fillSuperView(withMargins: margins)
+    func fillSuperview(withPadding padding: CGFloat) {
+        fillSuperview(withMargins: UIEdgeInsets(padding))
     }
     
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EA243B8C21D8574700B53508 /* LeanLayoutKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EA243B8A21D8574700B53508 /* LeanLayoutKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA243B9421D8578E00B53508 /* LeanLayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243B9321D8578E00B53508 /* LeanLayoutAnchor.swift */; };
-		EA243B9621D8588500B53508 /* NSLayoutDimension+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243B9521D8588500B53508 /* NSLayoutDimension+Extensions.swift */; };
 		EA243BAF21D86AB400B53508 /* LeanLayoutOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243BAE21D86AB400B53508 /* LeanLayoutOperators.swift */; };
 		EA243BB121D870A300B53508 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA243BB021D870A300B53508 /* UIView+Extensions.swift */; };
 		EA4C380B21E2595E00E5F2F0 /* LeanLayoutProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4C380A21E2595E00E5F2F0 /* LeanLayoutProperty.swift */; };
@@ -21,7 +20,6 @@
 		EA243B8A21D8574700B53508 /* LeanLayoutKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanLayoutKit.h; sourceTree = "<group>"; };
 		EA243B8B21D8574700B53508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA243B9321D8578E00B53508 /* LeanLayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeanLayoutAnchor.swift; sourceTree = "<group>"; };
-		EA243B9521D8588500B53508 /* NSLayoutDimension+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutDimension+Extensions.swift"; sourceTree = "<group>"; };
 		EA243BAE21D86AB400B53508 /* LeanLayoutOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeanLayoutOperators.swift; sourceTree = "<group>"; };
 		EA243BB021D870A300B53508 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		EA4C380A21E2595E00E5F2F0 /* LeanLayoutProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeanLayoutProperty.swift; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 		EA243B9221D8577000B53508 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				EA243B9521D8588500B53508 /* NSLayoutDimension+Extensions.swift */,
 				EA243B9321D8578E00B53508 /* LeanLayoutAnchor.swift */,
 				EA4C380A21E2595E00E5F2F0 /* LeanLayoutProperty.swift */,
 				EA243BAE21D86AB400B53508 /* LeanLayoutOperators.swift */,
@@ -162,7 +159,6 @@
 				EA4C380B21E2595E00E5F2F0 /* LeanLayoutProperty.swift in Sources */,
 				EA243B9421D8578E00B53508 /* LeanLayoutAnchor.swift in Sources */,
 				EA243BB121D870A300B53508 /* UIView+Extensions.swift in Sources */,
-				EA243B9621D8588500B53508 /* NSLayoutDimension+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

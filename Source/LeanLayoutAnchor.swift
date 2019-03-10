@@ -17,26 +17,4 @@ public protocol LeanLayoutAnchor {
     
 }
 
-extension LeanLayoutAnchor {
-    
-    func equals(anchor: Self, constant: CGFloat = 0) -> NSLayoutConstraint {
-        let constraint = self.constraint(equalTo: anchor, constant: constant)
-        constraint.isActive = true
-        return constraint
-    }
-    
-    func greaterOrEquals(anchor: Self, constant: CGFloat = 0) -> NSLayoutConstraint {
-        let constraint = self.constraint(greaterThanOrEqualTo: anchor, constant: constant)
-        constraint.isActive = true
-        return constraint
-    }
-    
-    func lessOrEquals(anchor: Self, constant: CGFloat = 0) -> NSLayoutConstraint {
-        let constraint = self.constraint(lessThanOrEqualTo: anchor, constant: constant)
-        constraint.isActive = true
-        return constraint
-    }
-    
-}
-
 extension NSLayoutAnchor: LeanLayoutAnchor { }
