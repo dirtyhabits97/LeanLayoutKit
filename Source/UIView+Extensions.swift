@@ -15,10 +15,21 @@ public extension UIView {
         configure(LeanLayoutProxy(view: self))
     }
     
-    func layout(relativeTo otherView: UIView,
-                       _ configure: (_ lhs: LeanLayoutProxy, _ rhs: LeanLayoutProxy) -> Void) {
+    func layout(
+        relativeTo otherView: UIView,
+        _ configure: (_ lhs: LeanLayoutProxy, _ rhs: LeanLayoutProxy) -> Void
+    ) {
         translatesAutoresizingMaskIntoConstraints = false
         configure(LeanLayoutProxy(view: self), LeanLayoutProxy(view: otherView))
+    }
+    
+    func addSubview(
+        _ view: UIView,
+        _ configure: (_ parent: LeanLayoutProxy, _ child: LeanLayoutProxy) -> Void
+    ) {
+        addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        configure(LeanLayoutProxy(view: self), LeanLayoutProxy(view: view))
     }
     
 }

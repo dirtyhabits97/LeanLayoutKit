@@ -10,20 +10,30 @@ import Foundation
 
 // MARK: - Constants
 
-public func + <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: CGFloat) -> (Anchor, CGFloat) {
+public func + <Anchor: LeanLayoutAnchor> (
+    lhs: Anchor,
+    rhs: CGFloat
+) -> (Anchor, CGFloat) {
     return (lhs, rhs)
 }
 
-public func + <Anchor: LeanLayoutAnchor> (lhs: LeanLayoutProperty<Anchor>,
-                                          rhs: CGFloat) -> (LeanLayoutProperty<Anchor>, CGFloat) {
+public func + <Anchor: LeanLayoutAnchor> (
+    lhs: LeanLayoutProperty<Anchor>,
+    rhs: CGFloat
+) -> (LeanLayoutProperty<Anchor>, CGFloat) {
     return (lhs, rhs)
 }
 
-public func - <Anchor: LeanLayoutAnchor> (lhs: Anchor, rhs: CGFloat) -> (Anchor, CGFloat) {
+public func - <Anchor: LeanLayoutAnchor> (
+    lhs: Anchor,
+    rhs: CGFloat
+) -> (Anchor, CGFloat) {
     return (lhs, -rhs)
 }
 
-public func - <Anchor: LeanLayoutAnchor> (lhs: LeanLayoutProperty<Anchor>,
-                                          rhs: CGFloat) -> (LeanLayoutProperty<Anchor>, CGFloat) {
+public func - <Anchor: LeanLayoutAnchor> (
+    lhs: LeanLayoutProperty<Anchor>,
+    rhs: CGFloat
+) -> (LeanLayoutProperty<Anchor>, CGFloat) {
     return (lhs, -rhs)
 }
